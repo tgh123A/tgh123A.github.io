@@ -1,0 +1,196 @@
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #e0e5ec;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  background: #e0e5ec;
+  border-radius: 20px;
+  box-shadow: 8px 8px 24px #babecc, -8px -8px 24px #fff;
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 2rem auto 1.5rem auto;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Avatar */
+.avatar {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1.2rem auto;
+  background: #e0e5ec;
+  border-radius: 50%;
+  box-shadow: 4px 4px 12px #babecc, -4px -4px 12px #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+}
+
+/* Heading & Text */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+.container p {
+  color: #444;
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+}
+
+/* Neumorphic Button */
+.neumorph-btn {
+  background: #e0e5ec;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px #babecc, -4px -4px 12px #fff;
+  color: #1976d2;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 2.2rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s, color 0.2s, background 0.2s;
+}
+.neumorph-btn:hover {
+  color: #fff;
+  background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%);
+  box-shadow: 2px 2px 8px #babecc, -2px -2px 8px #fff;
+}
+
+/* Links */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.links a {
+  color: #1976d2;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.links a:hover {
+  background: #1976d2;
+  color: #fff;
+}
+
+/* Card Section */
+.card-section {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 2rem auto 1.5rem auto;
+  max-width: 900px;
+}
+
+/* Flip Card */
+.flip-card {
+  background: transparent;
+  width: 220px;
+  height: 180px;
+  perspective: 1000px;
+  border-radius: 18px;
+  outline: none;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  transition: transform 0.6s cubic-bezier(.4,2,.6,1);
+  transform-style: preserve-3d;
+}
+.flip-card:focus .flip-card-inner,
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  backface-visibility: hidden;
+  background: #e0e5ec;
+  box-shadow: 4px 4px 16px #babecc, -4px -4px 16px #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin-bottom: 0.5rem;
+}
+.card-content {
+  font-size: 0.98rem;
+  color: #444;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .card-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .card-section {
+    margin: 1.2rem 0;
+  }
+  .flip-card {
+    width: 95vw;
+    max-width: 320px;
+    height: 160px;
+  }
+}
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+  .avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
