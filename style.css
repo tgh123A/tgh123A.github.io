@@ -16,7 +16,7 @@ body {
     padding: 40px 30px;
     max-width: 400px;
     width: 90%;
-    margin: 40px 0;
+    margin: 40px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,6 +38,7 @@ h1 {
     margin: 0 0 10px 0;
     font-size: 2rem;
     color: #333;
+    text-align: center;
 }
 p {
     color: #666;
@@ -53,7 +54,8 @@ p {
     font-size: 1rem;
     color: #333;
     cursor: pointer;
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, background 0.2s;
+    margin-bottom: 16px;
 }
 .neumorph-btn:active {
     box-shadow: inset 2px 2px 6px #a3b1c6, inset -2px -2px 6px #ffffff;
@@ -62,6 +64,8 @@ p {
     display: flex;
     gap: 16px;
     margin-top: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .links a {
     text-decoration: none;
@@ -71,18 +75,19 @@ p {
     border-radius: 12px;
     background: #e0e5ec;
     box-shadow: 2px 2px 6px #a3b1c6, -2px -2px 6px #ffffff;
-    transition: color 0.2s, box-shadow 0.2s;
+    transition: color 0.2s, box-shadow 0.2s, background 0.2s;
+    font-size: 1rem;
 }
 .links a:hover {
     color: #333;
+    background: #f5f6fa;
     box-shadow: 1px 1px 3px #a3b1c6, -1px -1px 3px #ffffff;
 }
-/* Card Flip Styles */
 .card-section {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin-top: 32px;
+    margin: 32px 0 0 0;
     width: 100%;
     align-items: center;
 }
@@ -91,6 +96,7 @@ p {
     width: 320px;
     height: 200px;
     perspective: 1000px;
+    max-width: 95vw;
 }
 .flip-card-inner {
     position: relative;
@@ -133,4 +139,45 @@ p {
 }
 .card-content {
     font-size: 1rem;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 24px 8px;
+        max-width: 98vw;
+        border-radius: 18px;
+    }
+    .avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    .neumorph-btn {
+        padding: 10px 18px;
+        font-size: 0.95rem;
+    }
+    .flip-card {
+        width: 98vw;
+        height: 160px;
+        max-width: 98vw;
+    }
+    .flip-card-front, .flip-card-back {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+    .card-title {
+        font-size: 1.05rem;
+    }
+    .card-content {
+        font-size: 0.95rem;
+    }
+    .links a {
+        font-size: 0.95rem;
+        padding: 7px 10px;
+    }
+    .card-section {
+        gap: 14px;
+    }
 }
