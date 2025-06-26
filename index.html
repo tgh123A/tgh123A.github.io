@@ -1,73 +1,383 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teguh Dwi Prasetyo | Junior Web Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Teguh Dwi Prasetyo, a Junior Web Developer, Designer, and Creator. Showcasing projects, skills, and contact information.">
-    <meta name="keywords" content="Teguh Dwi Prasetyo, web developer, portfolio, designer, creator, HTML, CSS, JavaScript, neumorphism">
-    <meta name="author" content="Teguh Dwi Prasetyo">
-    <meta property="og:title" content="Teguh Dwi Prasetyo | Junior Web Developer Portfolio">
-    <meta property="og:description" content="Portfolio of Teguh Dwi Prasetyo, a Junior Web Developer, Designer, and Creator. Showcasing projects, skills, and contact information.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tgh123a.github.io/">
-    <meta property="og:image" content="https://tgh123a.github.io/avatar.png">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Teguh Dwi Prasetyo | Junior Web Developer Portfolio">
-    <meta name="twitter:description" content="Portfolio of Teguh Dwi Prasetyo, a Junior Web Developer, Designer, and Creator.">
-    <meta name="twitter:image" content="https://tgh123a.github.io/avatar.png">
+    <title>Portfolio Junior Web Developer</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="avatar">👤</div>
-        <h1>Teguh Dwi Prasetyo</h1>
-        <p>Junior Web Developer | Designer | Creator<br>Welcome to my neumorphic portfolio website!</p>
-        <button class="neumorph-btn" onclick="window.open('https/drive.google.com/drive/folders/1E77yFMgqawXT-npOJJmFypD0_7ltkKGs?usp=sharing', '_blank')">Download CV</button>
-        <div class="links">
-            <a href="#">LinkedIn</a>
-            <a href="https://github.com/tgh123A">GitHub</a>
-            <a href="https://wa.me/6285832808725" target="_blank" rel="noopener">Contact</a>
-        </div>
-    </div>
-    <div class="card-section">
-        <div class="flip-card" tabindex="0">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <div class="card-title">About Me</div>
-                    <div class="card-content">Click or hover to see more!</div>
-                </div>
-                <div class="flip-card-back">
-                    <div class="card-title">About Me</div>
-                    <div class="card-content">I am Teguh Dwi Prasetyo, passionate about web development, design, and building creative digital solutions.</div>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card" tabindex="0">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <div class="card-title">Projects</div>
-                    <div class="card-content">Click or hover to see more!</div>
-                </div>
-                <div class="flip-card-back">
-                    <div class="card-title">Projects</div>
-                    <div class="card-content">- Portfolio Website<br>- E-commerce UI<br>- Blog Platform<br>And more...</div>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card" tabindex="0">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <div class="card-title">Contact</div>
-                    <div class="card-content">Click or hover to see more!</div>
-                </div>
-                <div class="flip-card-back">
-                    <div class="card-title">Contact</div>
-                    <div class="card-content">Email: teguhdwi460@.com<br>Phone: +62 858-3280-8725</div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="logo">PortfolioKu</a>
+                </div>
+                <div class="nav-links-desktop">
+                    <a href="#home" class="nav-link">Beranda</a>
+                    <a href="#about" class="nav-link">Tentang</a>
+                    <a href="#skills" class="nav-link">Keahlian</a>
+                    <a href="#projects" class="nav-link">Proyek</a>
+                    <a href="#contact" class="nav-link">Kontak</a>
+                </div>
+                <div class="mobile-menu-button">
+                    <button class="hamburger-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+               </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu">
+            <a href="#home" class="mobile-nav-link">Beranda</a>
+            <a href="#about" class="mobile-nav-link">Tentang</a>
+            <a href="#skills" class="mobile-nav-link">Keahlian</a>
+            <a href="#projects" class="mobile-nav-link">Proyek</a>
+            <a href="#contact" class="mobile-nav-link">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Halo, Saya <span>Teguh</span></h1>
+                    <h2>Junior Web Developer</h2>
+                    <p>Saya bersemangat membangun pengalaman web yang indah dan fungsional dengan teknologi modern.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn-primary">Lihat Proyek</a>
+                        <a href="#contact" class="btn-secondary">Hubungi Saya</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Developer" class="floating">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tentang Saya</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="tgh.jpg" alt="About">
+                </div>
+                <div class="about-text">
+                    <h3>Siapa Saya?</h3>
+                    <p>Saya seorang Junior Web Developer yang bersemangat dalam menciptakan solusi digital yang menarik dan fungsional. Dengan latar belakang pendidikan di bidang Teknik Informatika, saya memiliki dasar yang kuat dalam pengembangan web.</p>
+                    <p>Saya selalu berusaha untuk mempelajari teknologi terbaru dan menerapkannya dalam proyek-proyek saya. Fokus saya adalah membangun antarmuka pengguna yang intuitif dan pengalaman pengguna yang mulus.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4>Pendidikan</h4>
+                                <p>S1 Teknik Informatika</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Lokasi</h4>
+                                <p>Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>andi@example.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Telepon</h4>
+                                <p>+62 812 3456 7890</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Keahlian Saya</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="skills-content">
+                <div class="technical-skills">
+                    <h3>Kemampuan Teknis</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>HTML & CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>React</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Node.js</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="professional-skills">
+                    <h3>Kemampuan Profesional</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Komunikasi</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Kerja Tim</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Manajemen Proyek</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Pemecahan Masalah</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="technologies">
+                <h3>Teknologi yang Saya Gunakan</h3>
+                <div class="tech-icons">
+                    <div class="tech-icon">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Proyek Saya</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="E-commerce Website">
+                    <div class="project-info">
+                        <h3>Website E-commerce</h3>
+                        <p>Aplikasi e-commerce dengan sistem pembayaran terintegrasi dan manajemen produk.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <a href="#" class="btn-primary">Lihat Detail</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Task Management App">
+                    <div class="project-info">
+                        <h3>Aplikasi Manajemen Tugas</h3>
+                        <p>Sistem manajemen tugas dengan fitur kolaborasi tim dan notifikasi real-time.</p>
+                        <div class="project-tags">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <a href="#" class="btn-primary">Lihat Detail</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1436&q=80" alt="Portfolio Website">
+                    <div class="project-info">
+                        <h3>Website Portfolio</h3>
+                        <p>Website portfolio responsif dengan animasi modern dan desain yang elegan.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="#" class="btn-primary">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hubungi Saya</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Tetap Terhubung</h3>
+                    <p>Jika Anda memiliki pertanyaan atau ingin berdiskusi tentang proyek, jangan ragu untuk menghubungi saya.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>andi@example.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Telepon</h4>
+                                <p>+62 812 3456 7890</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Lokasi</h4>
+                                <p>Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subjek">
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="Pesan Anda" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">PortfolioKu</a>
+                    <p>Membangun pengalaman digital yang luar biasa.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#skills">Keahlian</a></li>
+                        <li><a href="#projects">Proyek</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PortfolioKu. Semua hak dilindungi.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">Bantuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
